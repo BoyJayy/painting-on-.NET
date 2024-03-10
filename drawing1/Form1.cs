@@ -69,6 +69,7 @@ namespace drawing1
 
         private void sliderWidth_Scroll(object sender, EventArgs e)
         {
+            pen.Width = sliderWidth.Value;
         }
 
         private void drawPlace_MouseDown(object sender, MouseEventArgs e)
@@ -97,7 +98,38 @@ namespace drawing1
 
         private void colorPickerButton_Click(object sender, EventArgs e)
         {
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pen.Color = ((Button)sender).BackColor;
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            g.Clear(drawPlace.BackColor);
+            drawPlace.Image = map;
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "JPG(*.JPG|*.jpg";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if(drawPlace.Image == null)
+                {
+                    drawPlace.Image.Save(saveFileDialog1.FileName);
+                }
+            }
+        }
+
+        private void colorPickerButton_Click_1(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pen.Color = colorDialog1.Color;
+                ((Button)sender).BackColor = colorDialog1.Color;
+            }
         }
     }
 }

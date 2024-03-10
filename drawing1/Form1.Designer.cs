@@ -42,9 +42,11 @@ namespace drawing1
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.colorPickerButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorPickerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sliderWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drawPlace)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -79,6 +81,7 @@ namespace drawing1
             this.saveButton.TabIndex = 2;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // clearButton
             // 
@@ -88,6 +91,7 @@ namespace drawing1
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -114,6 +118,7 @@ namespace drawing1
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -123,6 +128,7 @@ namespace drawing1
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -132,6 +138,7 @@ namespace drawing1
             this.button3.Size = new System.Drawing.Size(30, 30);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.colorPickerButton_Click);
             // 
             // button4
             // 
@@ -141,6 +148,7 @@ namespace drawing1
             this.button4.Size = new System.Drawing.Size(30, 30);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -150,6 +158,7 @@ namespace drawing1
             this.button5.Size = new System.Drawing.Size(30, 30);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button1_Click);
             // 
             // button6
             // 
@@ -159,6 +168,7 @@ namespace drawing1
             this.button6.Size = new System.Drawing.Size(30, 30);
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button1_Click);
             // 
             // button7
             // 
@@ -168,6 +178,7 @@ namespace drawing1
             this.button7.Size = new System.Drawing.Size(30, 30);
             this.button7.TabIndex = 6;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button1_Click);
             // 
             // button8
             // 
@@ -177,16 +188,7 @@ namespace drawing1
             this.button8.Size = new System.Drawing.Size(30, 30);
             this.button8.TabIndex = 7;
             this.button8.UseVisualStyleBackColor = false;
-            // 
-            // colorPickerButton
-            // 
-            this.colorPickerButton.Location = new System.Drawing.Point(3, 75);
-            this.colorPickerButton.Name = "colorPickerButton";
-            this.colorPickerButton.Size = new System.Drawing.Size(75, 23);
-            this.colorPickerButton.TabIndex = 8;
-            this.colorPickerButton.Text = "picker";
-            this.colorPickerButton.UseVisualStyleBackColor = true;
-            this.colorPickerButton.Click += new System.EventHandler(this.colorPickerButton_Click);
+            this.button8.Click += new System.EventHandler(this.button1_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -208,6 +210,16 @@ namespace drawing1
             this.label1.Size = new System.Drawing.Size(142, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Choose width";
+            // 
+            // colorPickerButton
+            // 
+            this.colorPickerButton.Location = new System.Drawing.Point(3, 75);
+            this.colorPickerButton.Name = "colorPickerButton";
+            this.colorPickerButton.Size = new System.Drawing.Size(75, 23);
+            this.colorPickerButton.TabIndex = 8;
+            this.colorPickerButton.Text = "color picker";
+            this.colorPickerButton.UseVisualStyleBackColor = true;
+            this.colorPickerButton.Click += new System.EventHandler(this.colorPickerButton_Click_1);
             // 
             // paint
             // 
@@ -245,9 +257,11 @@ namespace drawing1
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button colorPickerButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button colorPickerButton;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
