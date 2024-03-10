@@ -81,7 +81,6 @@ namespace drawing1
         {
             isMouse = false;
             arrayPoints.resetIndex();
-
         }
 
         private void drawPlace_MouseMove(object sender, MouseEventArgs e)
@@ -116,7 +115,7 @@ namespace drawing1
             saveFileDialog1.Filter = "JPG(*.JPG|*.jpg";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if(drawPlace.Image == null)
+                if (drawPlace.Image == null)
                 {
                     drawPlace.Image.Save(saveFileDialog1.FileName);
                 }
